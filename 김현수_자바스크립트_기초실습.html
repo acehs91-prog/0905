@@ -6,11 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>조건문 종합실습</title>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Oswald|Monoton|Play|Titillium+Web|Open+Sans|Roboto+Condensed');
+
+    body {
+      background: #1e2d67;
+      color: #fff;
+    }
+
     .flex {
+      font-family: 'Oswald', sans-serif;
       display: flex;
       align-items: center;
       gap: 5px;
       font-weight: bold;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0);
+    }
+
+    .box {
+      background: blue;
+
     }
   </style>
 </head>
@@ -68,7 +82,7 @@
     }
 
 
-    /* B. IF문 관련 */
+
     /*
       실습3. (프롬프트) 나이와 해당연도를 입력받아,
       40세이상이고, 해당연도가 짝수해이고, 나이도 짝수일 경우
@@ -78,7 +92,7 @@
     */
 
     let age = Number(prompt("나이는 몇살입니까?", "34"));
-    let year = Number(prompt("해당연도를 입력하세요", "2026"));
+    let year = Number(prompt("해당연도를 입력하세요", "2025"));
 
     // 나이가 40 >= 해당연도 짝수 === 나이도 짝수 
     if (age >= 40 && year % 2 === 0 && age % 2 === 0) {
@@ -125,24 +139,23 @@
 
     switch (position) {
       case "1":
-        room = "401";
+        room = "401호";
         message = "웹디자인 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
         break;
       case "2":
-        room = "402";
+        room = "402호";
         message = "웹개발 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
         break;
       case "3":
-        room = "403";
+        room = "403호";
         message = "웹기획 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
         break;
       default:
-        message = "잘못 입력하셨습니다";
+        document.write("<div class='flex'>잘못 입력하셨습니다</div>");
     }
-
-    document.write("<div class='flex'>" + message + "<h2 style='color:blue'>" + room + "</h2>" + "호에서 진행</div>");
-
-
   </script>
 </body>
 
