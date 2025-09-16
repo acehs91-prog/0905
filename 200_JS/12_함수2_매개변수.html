@@ -9,7 +9,9 @@
   <script>
 
     // 1. 실행 함수
-    function ezFn(name, area) { // 김현수, 노원구
+    function ezFn() { // 김현수, 노원구
+      var name = prompt("이름을 입력하세요", "김현수");
+      var area = prompt("사는곳을 입력하세요", "노원구");
       ezFn2(name);
       ezFn3(area);
     }
@@ -25,7 +27,6 @@
       var chAarea = document.getElementById("area");
       chAarea.textContent = area;
     }
-
   </script>
 </head>
 
@@ -40,7 +41,7 @@
   <!-- 2. 클릭시 발생한 이벤트 해당 함수 호출 (변경할 매게변수 , 초깃값) 넣기  -->
   <button onclick="ezFn2('이름1')">버튼1</button>
   <button onclick="ezFn3('구청1')">버튼2</button>
-  <button onclick="ezFn('김현수','노원구')">전체 변경 버튼</button>
+  <button onclick="ezFn()">전체 변경 버튼</button>
 
 
 
